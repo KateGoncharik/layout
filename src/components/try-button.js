@@ -1,8 +1,8 @@
 import { Component } from '../component.js';
-import { tryButtonText } from '../data.js';
+import { arrowIconPath, tryButtonText } from '../data.js';
 
 const arrowImg = new Component({ tag: 'img' });
-arrowImg.setAttribute('src', './src/assets/icon/arrow-up-right.png');
+arrowImg.setAttribute('src', arrowIconPath);
 
 export const tryButton = new Component(
   {
@@ -12,3 +12,10 @@ export const tryButton = new Component(
   },
   new Component({ className: 'arrow-wrapper' }, arrowImg)
 );
+
+const showModal = () => {
+  const modal = document.querySelector('.dialog');
+  modal.showModal();
+};
+
+tryButton.addListener('click', () => showModal(true));

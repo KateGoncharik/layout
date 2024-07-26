@@ -73,6 +73,23 @@ body {
   transition: 2s;
 }
 
+.cancel-button {
+  padding: 10px;
+  background-color: var(--white);
+  color: black;
+  transition: 0.5s;
+  border: none;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  background-color: var(--light-blue);
+  color: var(--blue);
+  transition: 0.5s;
+}
+
 .layout-img {
   width: 100%;
   border-radius: 0 12px 12px 0;
@@ -86,6 +103,78 @@ body {
   background-color: var(--white);
   border-radius: 40px;
 }
+
+.dialog {
+  background-color: var(--background-light-blue);
+  border: none;
+  width: 20em;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.auth-form-title {
+  font-weight: 500;
+}
+
+.login-input,
+.password-input {
+  background-color: var(--light-blue);
+  border: none;
+  border-radius: 10px;
+  padding: 5%;
+  width: 90%;
+}
+
+.login-input::placeholder,
+.password-input::placeholder {
+  color: var(--blue);
+}
+
+.login-button,
+.register-button {
+  padding: 4% 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.register-button {
+  background-color: var(--light-blue);
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+.register-button:hover,
+.login-button:hover {
+  transition: 1s;
+  cursor: pointer;
+}
+
+.login-button {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.remember-me-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.recover {
+  color: var(--blue);
+  font-weight: 500;
+}
+
 @media (max-width: 1000px) {
   .wrapper {
     flex-direction: column;
