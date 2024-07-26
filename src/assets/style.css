@@ -2,6 +2,7 @@
   --white: white;
   --blue: #244c98;
   --light-blue: #d7e2f6;
+  --background-light-blue: #f0f4fc;
   --grey: #727272;
 }
 
@@ -11,19 +12,65 @@ body {
 }
 
 .wrapper {
-  margin: 0 auto;
+  margin: 1% auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   border-radius: 10px;
   width: 90%;
-  background-color: var(--light-blue);
+  background-color: var(--background-light-blue);
 }
 
 .description-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 2%;
+  justify-content: space-between;
   width: 50%;
+  padding: 2%;
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2%;
+  gap: 10px;
+}
+
+.title {
+  color: var(--blue);
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.description {
+  color: var(--grey);
+  line-height: 2em;
+  font-size: 0.8em;
+  margin: 0;
+  max-width: 95%;
+}
+
+.try-button {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 60px;
+  border: none;
+  transition: 1s;
+  padding: 12px 12px 12px 24px;
+  max-width: 300px;
+  font-size: 18px;
+  font-family: Manrope;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.try-button:hover {
+  cursor: pointer;
+  background-color: var(--light-blue);
+  color: var(--blue);
+  transition: 2s;
 }
 
 .layout-img {
@@ -37,42 +84,14 @@ body {
 
 .arrow-wrapper {
   background-color: var(--white);
-  border-radius: 100px;
+  border-radius: 40px;
 }
-
-.description {
-  color: var(--grey);
-  line-height: 27.2px;
-}
-
-.title {
-  color: var(--blue);
-}
-
-.try-button {
-  background-color: var(--blue);
-  color: var(--white);
-  border-radius: 60px;
-  border: none;
-  transition: 1s;
-  padding: 12px 12px 12px 24px;
-  font-size: 18px;
-  font-family: Manrope;
-}
-
-.try-button:hover {
-  cursor: pointer;
-  background-color: var(--light-blue);
-  color: var(--blue);
-  transition: 2s;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .wrapper {
     flex-direction: column;
   }
   .description-wrapper {
-    width: 100%;
+    width: 90%;
   }
   .layout-img-wrapper {
     width: 100%;
@@ -80,4 +99,10 @@ body {
   .layout-img {
     border-radius: 0 0 12px 12px;
   }
+  .try-button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
 }

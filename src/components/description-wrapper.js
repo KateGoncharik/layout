@@ -1,18 +1,21 @@
 import { Component } from '../component.js';
-import { description } from '../data.js';
+import { description, titleText } from '../data.js';
 import { tryButton } from './try-button.js';
 
 export const descriptionWrapper = new Component(
   { className: 'description-wrapper' },
-  new Component({
-    tag: 'h1',
-    className: 'title',
-    text: 'Демо-версия',
-  }),
-  new Component({
-    tag: 'p',
-    className: 'description',
-    text: description,
-  }),
+  new Component(
+    { className: 'description-container' },
+    new Component({
+      tag: 'h1',
+      className: 'title',
+      text: titleText,
+    }),
+    new Component({
+      tag: 'p',
+      className: 'description',
+      text: description,
+    })
+  ),
   tryButton
 );
