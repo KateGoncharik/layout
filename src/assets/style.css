@@ -1,0 +1,7 @@
+:root {
+  --main-text: black;
+}
+.wrapper {
+  height: 50px;
+  background-color: var(--main-text);
+}
