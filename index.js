@@ -1,3 +1,3 @@
-import { layout } from './src/layout.js';
+import { createLayout } from './src/layout.js';
 
-document.body.append(layout.getNode());
+document.body.append(createLayout().getNode());
