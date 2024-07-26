@@ -15,6 +15,9 @@ const registerButtonText = 'Зарегистрироваться';
 const loginInputText = 'Email/Телефон';
 const passwordInputText = 'Пароль';
 
+const rememberPasswordText = 'Запомнить пароль';
+const recoverPasswordText = 'Восстановить';
+
 export {
   crossIconPath,
   arrowIconPath,
@@ -27,4 +30,6 @@ export {
   loginInputText,
   passwordInputText,
   authFormTitleText,
+  recoverPasswordText,
+  rememberPasswordText,
 };

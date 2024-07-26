@@ -1,5 +1,12 @@
 import { Component } from '../../component.js';
-import { loginButtonText, loginInputText, passwordInputText, registerButtonText } from '../../data.js';
+import {
+  loginButtonText,
+  loginInputText,
+  passwordInputText,
+  recoverPasswordText,
+  registerButtonText,
+  rememberPasswordText,
+} from '../../data.js';
 
 const loginButton = new Component({
   tag: 'button',
@@ -24,7 +31,7 @@ const rememberMeCheckbox = new Component({ tag: 'input' });
 rememberMeCheckbox.setAttribute('type', 'checkbox');
 rememberMeCheckbox.setAttribute('id', 'remember-me');
 
-const label = new Component({ tag: 'label', text: 'Запомнить пароль' });
+const label = new Component({ tag: 'label', text: rememberPasswordText });
 label.setAttribute('for', 'remember-me');
 
 export const authForm = new Component(
@@ -32,7 +39,7 @@ export const authForm = new Component(
   loginInput,
   passwordInput,
   new Component({ className: 'remember-me-wrapper' }, rememberMeCheckbox, label),
-  new Component({ tag: 'p', text: 'Восстановить', className: 'recover' }),
+  new Component({ tag: 'p', text: recoverPasswordText, className: 'recover' }),
   loginButton,
   registerButton
 );

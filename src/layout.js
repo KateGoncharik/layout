@@ -16,7 +16,6 @@ export const createLayout = () => {
       descriptionWrapper,
       new Component({ className: 'layout-img-wrapper' }, layoutImg)
     ),
-
     modal
   );
 };
