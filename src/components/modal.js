@@ -23,6 +23,6 @@ const closeModal = () => {
   modal.close();
 };
 
-cancelButton.addListener('click', closeModal());
+cancelButton.addListener('click', closeModal);
 
 export { modal };

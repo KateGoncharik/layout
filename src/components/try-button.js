@@ -18,4 +18,4 @@ const showModal = () => {
   modal.showModal();
 };
 
-tryButton.addListener('click', showModal());
+tryButton.addListener('click', showModal);
