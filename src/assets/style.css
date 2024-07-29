@@ -6,88 +6,89 @@
   --grey: #727272;
 }
 
-body {
-  font-family: Manrope;
+.app {
   transition: 1s;
+  font-family: Manrope;
+  margin: 3% auto;
+  padding: 0 2%;
 }
 
 .wrapper {
-  margin: 1% auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-radius: 10px;
-  width: 90%;
+  align-items: center;
   background-color: var(--background-light-blue);
+  border-radius: 10px;
 }
 
 .description-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
   padding: 2%;
 }
+
 .description-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2%;
   gap: 10px;
+  padding: 2% 0;
 }
 
 .title {
-  color: var(--blue);
-  font-size: 1.5em;
-  font-weight: 500;
   margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--blue);
 }
 
 .description {
-  color: var(--grey);
-  line-height: 2em;
-  font-size: 0.8em;
+  width: 52%;
   margin: 0;
-  max-width: 95%;
+  line-height: 1.7em;
+  font-size: 17px;
+  color: var(--grey);
 }
 
 .try-button {
-  background-color: var(--blue);
-  color: var(--white);
-  border-radius: 60px;
-  border: none;
-  transition: 1s;
-  padding: 12px 12px 12px 24px;
-  max-width: 300px;
-  font-size: 18px;
-  font-family: Manrope;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 300px;
+  padding: 12px 12px 12px 24px;
+  transition: 1s;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 60px;
+  font-size: 18px;
+  font-family: Manrope;
+  color: var(--white);
 }
 
 .try-button:hover {
-  cursor: pointer;
-  background-color: var(--light-blue);
-  color: var(--blue);
   transition: 2s;
+  background-color: var(--light-blue);
+  cursor: pointer;
+  color: var(--blue);
 }
 
 .cancel-button {
+  align-self: flex-end;
   padding: 10px;
-  background-color: var(--white);
-  color: black;
   transition: 0.5s;
+  background-color: var(--white);
   border: none;
   border-radius: 10px;
-  align-self: flex-end;
+  color: black;
 }
 
 .cancel-button:hover {
-  cursor: pointer;
-  background-color: var(--light-blue);
-  color: var(--blue);
   transition: 0.5s;
+  background-color: var(--light-blue);
+  cursor: pointer;
+  color: var(--blue);
 }
 
 .layout-img {
@@ -96,18 +97,18 @@ body {
 }
 
 .layout-img-wrapper {
-  width: 50%;
+  display: flex;
+  width: 100%;
 }
-
 .arrow-wrapper {
   background-color: var(--white);
   border-radius: 40px;
 }
 
 .dialog {
+  width: 30%;
   background-color: var(--background-light-blue);
   border: none;
-  width: 20em;
 }
 
 .modal-container {
@@ -128,11 +129,11 @@ body {
 
 .login-input,
 .password-input {
+  width: 90%;
+  padding: 5%;
   background-color: var(--light-blue);
   border: none;
   border-radius: 10px;
-  padding: 5%;
-  width: 90%;
 }
 
 .login-input::placeholder,
@@ -142,10 +143,10 @@ body {
 
 .login-button,
 .register-button {
+  width: 100%;
   padding: 4% 0;
   border: none;
   border-radius: 5px;
-  width: 100%;
 }
 
 .register-button {
@@ -161,8 +162,8 @@ body {
 }
 
 .login-button {
-  color: var(--white);
   background-color: var(--blue);
+  color: var(--white);
 }
 
 .remember-me-wrapper {
@@ -171,27 +172,77 @@ body {
 }
 
 .recover {
-  color: var(--blue);
   font-weight: 500;
+  color: var(--blue);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
+  .dialog {
+    width: 45%;
+  }
+
+  .title {
+    font-size: 27px;
+  }
+
+  .description {
+    width: 70%;
+  }
+
+  .description-wrapper {
+    padding: 0 4%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dialog {
+    width: 55%;
+  }
+
   .wrapper {
     flex-direction: column;
   }
+
   .description-wrapper {
-    width: 90%;
+    padding: 2% 4% 3%;
   }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 15px;
+  }
+
   .layout-img-wrapper {
     width: 100%;
   }
+
   .layout-img {
     border-radius: 0 0 12px 12px;
   }
+
   .try-button {
     font-size: 15px;
   }
 }
 
 @media (max-width: 400px) {
+  .dialog {
+    width: 70%;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .description-wrapper {
+    gap: 10px;
+  }
 }
